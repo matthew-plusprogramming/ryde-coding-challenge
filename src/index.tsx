@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './fonts.scss';
 import './index.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
+import App from 'App';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
