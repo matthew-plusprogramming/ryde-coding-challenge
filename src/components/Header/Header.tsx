@@ -13,6 +13,8 @@ const Header: React.FC<HeaderProps> = ({
       <img src={Logo} alt="Ryde Logo" className={classname(logo)} />
       <span className={logoText}>Ryde</span>
     </div>
+    {/* I thought to include dummy links, but I realized its far outside the
+    scope of this project */}
   </div>
 );
 
