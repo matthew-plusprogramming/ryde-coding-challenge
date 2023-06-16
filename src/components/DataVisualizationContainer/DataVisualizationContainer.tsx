@@ -71,7 +71,7 @@ const DataVisualizationContainer: React.FC<DataVisualizationContainerProps> = (
     <PaddingContainer
       className={classnames(dataVisualizationContainer, className)}
       paddingSize={{
-        horizontal: PaddingSize.LARGE,
+        horizontal: PaddingSize.XLARGE,
         vertical: PaddingSize.LARGE
       }}
       {...props}
@@ -85,7 +85,7 @@ const DataVisualizationContainer: React.FC<DataVisualizationContainerProps> = (
               <DataVisualizationChartHeader
                 dateGrouping={dateGrouping}
                 handleGroupingChange={(_, value) => {
-                  setDateGrouping(value);
+                  value && setDateGrouping(value);
                 }}
                 startDate={dateRange[ 0 ]}
                 endDate={dateRange[ 1 ]}
