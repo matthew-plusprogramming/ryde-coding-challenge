@@ -1,17 +1,36 @@
-# typescript-react-template
-My lightweight template project for TypeScript &amp; React
+# Ryde Data Visualization
 
-Based on `npx create-react-app my-app --template typescript`
-Migrated to vite
+This project is written in TypeScript using Vite as the packager.
 
-Additions/Changes:
-- Added sass support
-- Added css/scss module support
-- Added eslint with support for typescript and react rules
-- Added additional meta tags to index.html
-- Added template component and context
-- Added framer motion support
-- Added gitmoji support
+## Getting started
+To work on this project, first install dependencies using your package manager
+of choice. Some common examples are listed below.
 
-Planned changes:
-- Path aliases
+npm:
+```sh
+npm i
+```
+
+yarn:
+```sh
+yarn install
+```
+
+## Running Project
+Once dependencies are installed the project can be started in a number of ways:
+
+```sh
+yarn start
+```
+Serves a development version of the application, auto-hotreloads during
+development.
+
+```sh
+yarn serve
+```
+Serves a locally built production version of the application.
+
+```sh
+yarn build
+```
+Builds the application and places it in the `build` folder.
