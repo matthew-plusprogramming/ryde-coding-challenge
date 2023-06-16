@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+
+// Tbh, I don't think this is the best way to do this, but I'll have this for now and research how to do this better in the future
+.verticalSmall {
+  padding-top: $size-spacing-small;
+  padding-bottom: $size-spacing-small;
+}
+
+.verticalMedium {
+  padding-top: $size-spacing-medium;
+  padding-bottom: $size-spacing-medium;
+}
+
+.verticalLarge {
+  padding-top: $size-spacing-large;
+  padding-bottom: $size-spacing-large;
+}
+
+.verticalXLarge {
+  padding-top: $size-spacing-xlarge;
+  padding-bottom: $size-spacing-xlarge;
+}
+
+.horizontalSmall {
+  padding-left: $size-spacing-small;
+  padding-right: $size-spacing-small;
+}
+
+.horizontalMedium {
+  padding-left: $size-spacing-medium;
+  padding-right: $size-spacing-medium;
+}
+
+.horizontalLarge {
+  padding-left: $size-spacing-large;
+  padding-right: $size-spacing-large;
+}
+
+.horizontalXLarge {
+  padding-left: $size-spacing-xlarge;
+  padding-right: $size-spacing-xlarge;
+}
