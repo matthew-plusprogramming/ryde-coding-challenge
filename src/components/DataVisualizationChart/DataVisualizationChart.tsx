@@ -12,7 +12,7 @@ import {
   Legend
 } from 'recharts';
 import {
-  DATE_FORMAT
+  DATE_FORMAT, DATE_FORMAT_SHORT
 } from 'constants/dataVisualizations.constants';
 import { ApiHookState } from 'hooks/useApi';
 import { useRydeSignupsDataProcessor } from 'hooks/useRydeSignupsDataProcessor';
@@ -39,13 +39,15 @@ const DataVisualizationChart: React.FC<DataVisualizationChartProps> = ({
     ticks
   } = useRydeSignupsDataProcessor({ data, dateRange, groupBy });
 
-  const labelFormatter = (time: number): string => {
+  const labelFormatter = (
+    dateFormat: string = DATE_FORMAT
+  ): ((time: number) => string) => (time): string => {
     const date = dayjs.utc(time);
 
-    return groupBy === DateGrouping.Day ?
-      date.format(DATE_FORMAT) :
-      `${date.startOf(groupBy).format(DATE_FORMAT)} - \
-      ${date.endOf(groupBy).format(DATE_FORMAT)}`;
+    return (groupBy === DateGrouping.Day ?
+      date.format(dateFormat) :
+      `${date.startOf(groupBy).format(dateFormat)} - \
+          ${date.endOf(groupBy).format(dateFormat)}`);
   };
 
   return (
@@ -60,11 +62,11 @@ const DataVisualizationChart: React.FC<DataVisualizationChartProps> = ({
           type="number"
           dataKey="date"
           domain={domain}
-          tickFormatter={labelFormatter}
+          tickFormatter={labelFormatter(DATE_FORMAT_SHORT)}
           ticks={ticks}
         />
         <Tooltip
-          labelFormatter={labelFormatter}
+          labelFormatter={labelFormatter()}
         />
         <Legend />
         <Line type="monotone" dataKey="total" stroke="#8884d8" />
