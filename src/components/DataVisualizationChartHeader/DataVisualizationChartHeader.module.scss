@@ -1,0 +1,13 @@
+@import '../../variables.scss';
+
+.chartHeader {
+  margin: 0;
+}
+
+.dateRangeButton {
+  // Really hate to do this, but I need to override MUI here
+  margin-left: auto !important;
+}
+.dateGroupSelector {
+  margin-left: $size-spacing-medium;
+}

@@ -1,0 +1,26 @@
+.dataVisualizationContainer {
+  // Position
+  flex: 1;
+
+  // Display
+  display: flex;
+  flex-direction: column;
+}
+
+.chartContainer {
+  // Position
+  flex: 1;
+}
+
+.spinner {
+  // Position
+  position: absolute;
+  top: 45%;
+  align-self: center;
+
+  // Display
+
+  // Box Model
+  width: 4em !important;
+  height: 4em !important;
+}
